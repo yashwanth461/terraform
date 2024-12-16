@@ -14,7 +14,7 @@ module "ec2" {
   instance_type="t2.micro"
   subnet_id= "subnet-0c105ed3f5b151fa0"
   key_name = "kube"
-  vpc_id = module.vpc.vpc_id
+  vpc_id = "vpc-06b0e009e653d4bcd"
 }
 
 
