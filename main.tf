@@ -8,6 +8,14 @@ module "vpc" {
 }
 
 
+module "ec2" {
+  source = "./module/ec2"
+  ami_id ="ami-0aebec83a182ea7ea"
+  instance_type="t2.micro"
+  subnet_id= "subnet-0c105ed3f5b151fa0"
+  key_name = "kube"
+  vpc_id = module.vpc.vpc_id
+}
 
 
 
